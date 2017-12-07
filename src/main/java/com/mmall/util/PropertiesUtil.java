@@ -17,15 +17,18 @@ public class PropertiesUtil {
 
     private static Properties props;
 
+    //1  2{}  3class{}
     static {
         String fileName = "mmall.properties";
         props = new Properties();
         try {
-            props.load(new InputStreamReader(PropertiesUtil.class.getClassLoader().getResourceAsStream(fileName),"UTF-8"));
+            props.load(new InputStreamReader(PropertiesUtil.class.getClassLoader().getResourceAsStream(fileName),
+                    "UTF-8"));
         } catch (IOException e) {
             logger.error("配置文件读取异常",e);
         }
     }
+
 
     public static String getProperty(String key){
         String value = props.getProperty(key.trim());

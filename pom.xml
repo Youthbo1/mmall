@@ -181,7 +181,7 @@
 
 
 
-    <!-- mybatis pager -->
+    <!-- mybatis pager 分页-->
 
     <dependency>
       <groupId>com.github.pagehelper</groupId>
